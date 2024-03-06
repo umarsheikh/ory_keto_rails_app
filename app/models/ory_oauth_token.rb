@@ -1,0 +1,2 @@
+class OryOauthToken < ApplicationRecord
+end

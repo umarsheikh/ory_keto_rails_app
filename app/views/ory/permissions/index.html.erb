@@ -1,0 +1,20 @@
+<%= link_to "Home", root_path %>
+<h2>Ory keto permissions</h2>
+<table border="2">
+  <thead>
+    <th>Subject</th>
+    <th>Relation</th>
+    <th>Object</th>
+    <th>Namespace</th>
+  </thead>
+  <tbody>
+    <% @relation_tuples.each do |tuple| %>
+      <tr>
+        <td><%= tuple.subject_id %></td>
+        <td><%= tuple.relation %></td>
+        <td><%= tuple.object %></td>
+        <td><%= tuple.namespace %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

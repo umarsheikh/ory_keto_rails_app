@@ -1,24 +1,27 @@
-# README
+# Ory Keto Rails Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## OAuth2 Authorization
+### Get OAuth credentials from Ory:
+-  In the [Ory Console](https://console.ory.sh/) goto **OAuth 2** tab
+- Click **Create OAuth2 Client** button
+- Then in the **Server App** section click on **Create** button
+- Enter **Client Name**, in the **Redirect URIs** add callback URL to redirect user after authorization (e.g.  `http://localhost:3000/oauth/callback`). We can leave rest of the options as they are by default. Then click **Create Client** button at the bottom of the page.
+- Copy and Save the **Secret** at a safe place because this cannot be retrieved after this. Now close the popup.
+- It will display the **OAuth2 Clients** list. From this page we can get the **ID** of the client we just created.
+### Set ENV variables:
 
-Things you may want to cover:
+-	`ORY_CLIENT_ID` (Oauth client ID we get in the above step)
+-	`ORY_SECRET` (OAuth client secret we get in the above step)
+-	`API_BASE_URL` (Under the **Project Settings** tab in Ory Console Copy the URL from **API endpoints**)
+-	`ORY_API_KEY` (Under **Developers** tab in the Ory Console we can **Create new API key**)
 
-* Ruby version
+### Run the application:
+-	Run rails server. Goto home page of the application. And Navigate using the links provided on the page.
 
-* System dependencies
+## Display all permissions
+-  Under **Permissions** tab in the Ory Console add some permissions rules.
+-  Goto `http://localhost:3000/ory/permissions` or follow the **View permissions** hyperlink on the home page of this app.
+-  The application will fetch and display the permissions rule from Ory.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Display all users(identities)
+-  Goto `http://localhost:3000/ory/identities` or follow the **View all users (Identities)** hyperlink on the home page of this app.

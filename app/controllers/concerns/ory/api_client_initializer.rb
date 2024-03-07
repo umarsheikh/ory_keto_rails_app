@@ -24,7 +24,7 @@ module Ory::ApiClientInitializer
   def configuration
     @config ||= OryKetoClient::Configuration.new do |config|
       config.scheme = 'https'
-      config.host = ENV['ORY_PROJECT_HOST']
+      config.host = ENV['API_BASE_URL'].split("//").last
       config.api_key[TOKEN_TYPE] = ENV['ORY_API_KEY']
       config.api_key_prefix[TOKEN_TYPE] = 'Bearer'
       config.server_index = nil

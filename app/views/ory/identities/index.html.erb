@@ -1,0 +1,18 @@
+<%= link_to "Home", root_path %>
+<h2>Ory keto users</h2>
+<table border="2">
+  <thead>
+    <th>ID</th>
+    <th>Email</th>
+    <th>State</th>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user['id'] %></td>
+        <td><%= user['traits']['email'] %></td>
+        <td><%= user['state'] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

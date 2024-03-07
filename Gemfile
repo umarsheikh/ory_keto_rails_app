@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 gem 'dotenv-rails', groups: [:development, :test]
-gem 'ory-keto-client', '0.11.0.alpha0'
+gem 'ory-keto-client', '0.9.0.alpha0'
 gem "oauth2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

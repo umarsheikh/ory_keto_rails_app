@@ -137,7 +137,7 @@ GEM
       rack (>= 1.2, < 4)
       snaky_hash (~> 2.0)
       version_gem (~> 1.1)
-    ory-keto-client (0.11.0.alpha0)
+    ory-keto-client (0.9.0.alpha0)
       typhoeus (~> 1.0, >= 1.0.1)
     public_suffix (5.0.4)
     puma (4.3.12)
@@ -257,7 +257,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   oauth2
-  ory-keto-client (= 0.11.0.alpha0)
+  ory-keto-client (= 0.9.0.alpha0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.7)
   sass-rails (>= 6)

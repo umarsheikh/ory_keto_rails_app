@@ -1,6 +1,8 @@
 # Ory Keto Rails Application
 
-## OAuth2 Authorization
+This app is created to play around with Ory/Keto. Currently, it implements Oauth2 Authorization, Displaying Permissions, and Displaying All Users Endpoints from Ory/Keto.
+
+## 1 OAuth2 Authorization
 ### Get OAuth credentials from Ory:
 -  In the [Ory Console](https://console.ory.sh/) goto **OAuth 2** tab
 - Click **Create OAuth2 Client** button
@@ -18,10 +20,10 @@
 ### Run the application:
 -	Run rails server. Goto home page of the application. And Navigate using the links provided on the page.
 
-## Display all permissions
+## 2 Display all permissions
 -  Under **Permissions** tab in the Ory Console add some permissions rules.
 -  Goto `http://localhost:3000/ory/permissions` or follow the **View permissions** hyperlink on the home page of this app.
 -  The application will fetch and display the permissions rule from Ory.
 
-## Display all users(identities)
+## 3 Display all users(identities)
 -  Goto `http://localhost:3000/ory/identities` or follow the **View all users (Identities)** hyperlink on the home page of this app.

@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   namespace :ory do
     get :permissions, to: "permissions#index"
+    get :identities, to: "identities#index"
   end
 end

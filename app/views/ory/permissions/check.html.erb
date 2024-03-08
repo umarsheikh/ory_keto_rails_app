@@ -1,0 +1,27 @@
+<%= link_to "Home", root_path %>
+<h2>Check ory keto permissions</h2>
+<%= form_with(url: ory_verify_permissions_path) do |form| %>
+
+  <% unless @allowed.nil? %>
+    <div style="padding: 10px; text-align: center;">
+      <b>The permission is <%= @allowed ? "Allowed" : "Not allowed" %></b>
+    </div>
+  <% end %>
+
+  <%= form.label :namespace %>
+  <%= form.text_field :namespace %>
+
+  <%= form.label :subject %>
+  <%= form.text_field :subject_id %>
+
+  <%= form.label :relation %>
+  <%= form.text_field :relation %>
+
+  <%= form.label :object %>
+  <%= form.text_field :object %>
+
+  <%= form.label :max_depth %>
+  <%= form.text_field :max_depth %>
+
+  <%= form.submit 'Check' %>
+<% end %>

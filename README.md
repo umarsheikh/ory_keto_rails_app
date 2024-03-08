@@ -20,10 +20,13 @@ This app is created to play around with Ory/Keto. Currently, it implements Oauth
 ### Run the application:
 -	Run rails server. Goto home page of the application. And Navigate using the links provided on the page.
 
-## 2 Display all permissions
+## 2 Check a permission
+-  On `http://localhost:3000/ory/check-permissions` we can verify a permission. The to **Check a permission** is also available on the home page of the application.
+
+## 3 Display all permissions
 -  Under **Permissions** tab in the Ory Console add some permissions rules.
 -  Goto `http://localhost:3000/ory/permissions` or follow the **View permissions** hyperlink on the home page of this app.
 -  The application will fetch and display the permissions rule from Ory.
 
-## 3 Display all users(identities)
+## 4 Display all users(identities)
 -  Goto `http://localhost:3000/ory/identities` or follow the **View all users (Identities)** hyperlink on the home page of this app.

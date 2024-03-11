@@ -1,8 +1,18 @@
 module Ory::ApiClientInitializer
   TOKEN_TYPE = 'api_key'
+  API_BASE_URL = ENV['API_BASE_URL']
+  AUTH_URL = "/oauth2/auth"
+  TOKEN_URL = "/oauth2/token"
+  SCOPE = 'openid offline_access'
+  CLIENT_ID = ENV['ORY_CLIENT_ID']
+  SECRET = ENV['ORY_SECRET']
 
   def api_client
     @api_client ||= OryKetoClient::ApiClient.new(configuration)
+  end
+
+  def oauth_client
+    OAuth2::Client.new(CLIENT_ID, SECRET, site: API_BASE_URL, authorize_url: AUTH_URL, token_url: TOKEN_URL)
   end
 
   def read_api

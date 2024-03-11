@@ -1,4 +1,4 @@
-class OauthController < ApplicationController
+class Ory::OauthController < ApplicationController
 
   API_BASE_URL = ENV['API_BASE_URL']
   AUTH_URL = "/oauth2/auth"
@@ -28,7 +28,7 @@ class OauthController < ApplicationController
   def fetch_tokens
     client.auth_code.get_token(
       params[:code],
-      redirect_uri: callback_oauth_url
+      redirect_uri: callback_url
     )
   end
 
@@ -41,7 +41,7 @@ class OauthController < ApplicationController
   end
 
   def callback_url
-    callback_oauth_url
+    callback_ory_oauth_url
   end
 
   def save_tokens(token)

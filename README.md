@@ -3,11 +3,12 @@
 This app is created to play around with Ory/Keto. Currently, it implements Oauth2 Authorization, Displaying Permissions, and Displaying All Users Endpoints from Ory/Keto.
 
 ## 1 OAuth2 Authorization
+- To perform authorization, you need to have a user(identity) inside [Ory Console](https://console.ory.sh/). If not, goto **Identities** tab in Ory Console and **Create identity**
 ### Get OAuth credentials from Ory:
 -  In the [Ory Console](https://console.ory.sh/) goto **OAuth 2** tab
 - Click **Create OAuth2 Client** button
 - Then in the **Server App** section click on **Create** button
-- Enter **Client Name**, in the **Redirect URIs** add callback URL to redirect user after authorization (e.g.  `http://localhost:3000/oauth/callback`). We can leave rest of the options as they are by default. Then click **Create Client** button at the bottom of the page.
+- Enter **Client Name**, in the **Redirect URIs** add callback URL to redirect user after authorization (e.g.  `http://localhost:3000/ory/oauth/callback`). We can leave rest of the options as they are by default. Then click **Create Client** button at the bottom of the page.
 - Copy and Save the **Secret** at a safe place because this cannot be retrieved after this. Now close the popup.
 - It will display the **OAuth2 Clients** list. From this page we can get the **ID** of the client we just created.
 ### Set ENV variables:

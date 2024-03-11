@@ -21,6 +21,7 @@ This app is created to play around with Ory/Keto. Currently, it implements Oauth
 -	Run rails server. Goto home page of the application. And Navigate using the links provided on the page.
 
 ## 2 Check a permission
+- First, you need to have some permissions inside [Ory Console](https://console.ory.sh/). If not, then create a few permissions there
 -  On `http://localhost:3000/ory/check-permissions` we can verify a permission. The to **Check a permission** is also available on the home page of the application.
 
 ## 3 Display all permissions

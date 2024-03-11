@@ -2,7 +2,7 @@ class Ory::PermissionsController < ApplicationController
   include Ory::ApiClientInitializer
 
   def index
-    @relation_tuples = fetch_relation_tupples_from_ory
+    @relation_tuples = fetch_relation_tuples_from_ory
   end
 
   def check
@@ -15,7 +15,7 @@ class Ory::PermissionsController < ApplicationController
 
   private
 
-  def fetch_relation_tupples_from_ory
+  def fetch_relation_tuples_from_ory
     read_api.get_relation_tuples(request_options).relation_tuples
   end
 

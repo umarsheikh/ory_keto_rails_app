@@ -1,11 +1,5 @@
-class OauthController < ApplicationController
-
-  API_BASE_URL = ENV['API_BASE_URL']
-  AUTH_URL = "/oauth2/auth"
-  TOKEN_URL = "/oauth2/token"
-  SCOPE = 'openid offline_access'
-  CLIENT_ID = ENV['ORY_CLIENT_ID']
-  SECRET = ENV['ORY_SECRET']
+class Ory::OauthController < ApplicationController
+  include Ory::ApiClientInitializer
 
   def new
     redirect_to auth_url, allow_other_host: true
@@ -21,19 +15,16 @@ class OauthController < ApplicationController
   end
 
   private
-  def client
-    OAuth2::Client.new(CLIENT_ID, SECRET, site: API_BASE_URL, authorize_url: AUTH_URL, token_url: TOKEN_URL)
-  end
 
   def fetch_tokens
-    client.auth_code.get_token(
+    oauth_client.auth_code.get_token(
       params[:code],
-      redirect_uri: callback_oauth_url
+      redirect_uri: callback_url
     )
   end
 
   def auth_url
-    client.auth_code.authorize_url(
+    oauth_client.auth_code.authorize_url(
       scope: SCOPE,
       redirect_uri: callback_url,
       state: SecureRandom.uuid
@@ -41,7 +32,7 @@ class OauthController < ApplicationController
   end
 
   def callback_url
-    callback_oauth_url
+    callback_ory_oauth_url
   end
 
   def save_tokens(token)

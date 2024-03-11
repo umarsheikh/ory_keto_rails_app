@@ -8,20 +8,32 @@
     </div>
   <% end %>
 
-  <%= form.label :namespace %>
-  <%= form.text_field :namespace %>
+  <div class="form-field">
+    <%= form.label :namespace %>
+    <%= form.text_field :namespace %>
+  </div>
 
-  <%= form.label :subject %>
-  <%= form.text_field :subject_id %>
+  <div class="form-field">
+    <%= form.label :subject_id, 'Subject' %>
+    <%= form.text_field :subject_id %>
+  </div>
 
-  <%= form.label :relation %>
-  <%= form.text_field :relation %>
+  <div class="form-field">
+    <%= form.label :relation %>
+    <%= form.text_field :relation %>
+  </div>
 
-  <%= form.label :object %>
-  <%= form.text_field :object %>
+  <div class="form-field">
+    <%= form.label :object %>
+    <%= form.text_field :object %>
+  </div>
 
-  <%= form.label :max_depth %>
-  <%= form.text_field :max_depth %>
+  <div class="form-field">
+    <%= form.label :max_depth %>
+    <%= form.text_field :max_depth %>
+  </div>
 
-  <%= form.submit 'Check' %>
+  <div class="">
+    <%= form.submit 'Check' %>
+  </div>
 <% end %>

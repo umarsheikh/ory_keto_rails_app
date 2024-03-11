@@ -3,7 +3,7 @@
 This app is created to play around with Ory/Keto. Currently, it implements Oauth2 Authorization, Displaying Permissions, and Displaying All Users Endpoints from Ory/Keto.
 
 ## 1 OAuth2 Authorization
-**Useful link:** https://console.ory.sh/<project_id>/oauth/overview
+**Useful link:** [Ory Oauth](https://console.ory.sh/<project_id>/oauth/overview)
 - To perform authorization, you need to have a user(identity) inside [Ory Console](https://console.ory.sh/). If not, goto **Identities** tab in Ory Console and **Create identity**
 ### Get OAuth credentials from Ory:
 -  In the [Ory Console](https://console.ory.sh/) goto **OAuth 2** tab
@@ -23,7 +23,7 @@ This app is created to play around with Ory/Keto. Currently, it implements Oauth
 -	Run rails server. Goto home page of the application. And Navigate using the links provided on the page.
 
 ## 2 Check a permission
-**Useful link:** https://console.ory.sh/<project_id>/permissions/configuration
+**Useful link:** [Ory Permission Config](https://console.ory.sh/<project_id>/permissions/configuration)
 - First, you need to have some permissions inside [Ory Console](https://console.ory.sh/). If not, then create a few permissions there
 -  On `http://localhost:3000/ory/check-permissions` we can verify a permission. The to **Check a permission** is also available on the home page of the application.
 
@@ -33,5 +33,5 @@ This app is created to play around with Ory/Keto. Currently, it implements Oauth
 -  The application will fetch and display the permissions rule from Ory.
 
 ## 4 Display all users(identities)
-**Useful link:** https://console.ory.sh/<project_id>/identities
+**Useful link:** [Ory Identities](https://console.ory.sh/<project_id>/identities)
 -  Goto `http://localhost:3000/ory/identities` or follow the **View all users (Identities)** hyperlink on the home page of this app.
